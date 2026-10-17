@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: rgb(100, 249, 97);
+    }
+    div{
+        text-align: center;
+    }
+    h3{
+        background-color: rgb(210, 62, 91);
+            border: 3px solid black; 
+            padding: 15px; 
+            border-radius: 8px; 
+            max-width: 300px;
+            margin: 20px auto; 
+
+    }
+    </style>
+<body>
+    <div>
+    <h1 id="title">SimpleCalculator</h1>
+    <label>enter a value</label>
+    <input id="a" type="text" placeholder="enter a value"><br><br>
+    <label>enter b value</label>
+    <input id="b" type="text" placeholder="enter b value"><br><br>
+    <button onclick="calculate()">submit</button>
+    <h3 id="result"></h3>
+    <script>
+        document.getElementById("result").innerText="simple calculator";
+        function calculate(){
+            let a=Number(document.getElementById("a").value);
+            let b=Number(document.getElementById("b").value);
+            let add=a+b;
+    
+            let sub = a - b;
+            let mul = a * b;
+            let div = a / b;
+            document.getElementById("result").innerHTML =
+            "Addition="+add+"<br>" +
+            "subtraction="+ (a-b) +"<br>" +
+            "multiplication="+ (a*b) +"<br>" +
+            "division="+ (a/b);
+        }
+        </script>
+        </div>
+    </body>
+</html>
